@@ -9,19 +9,20 @@ const reducer = (state = initialState, action) => {
 
     switch(action.type) {
         case 'INCREMENT' :
-            const newState = {...state}
-            newState.count = state.count + 1;
-            return newState;
+            const incState = {...state, count: state.count + 1}
+            return incState;
+
+        case 'DECREMENT' :
+            const decState = {...state, count: state.count - 1}
+            return decState;
+
         default:
             return state;
-        //console.log(Object.assign({}, state, { count: state.count + 1}))
     }
 
 }
 
 const store = createStore(reducer);
-
-
 
 
 export default store;

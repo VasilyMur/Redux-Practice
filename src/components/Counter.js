@@ -8,6 +8,7 @@ class Counter extends React.Component {
                 <h2>I'm the Counter</h2>
                 <p>Count: {this.props.count}</p>
                 <button onClick={this.props.onIncrementClick}>Increment</button>
+                <button onClick={this.props.onDecrementClick}>Decrement</button>
             </React.Fragment>
         )
     }
@@ -23,8 +24,11 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         onIncrementClick: () => {
-            console.log('CLICKINGGGG!!');
             const action = { type: 'INCREMENT' };
+            dispatch(action);
+        },
+        onDecrementClick: () => {
+            const action = { type: 'DECREMENT' };
             dispatch(action);
         }
     }
