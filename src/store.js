@@ -16,6 +16,9 @@ const reducer = (state = initialState, action) => {
             const decState = {...state, count: state.count - 1}
             return decState;
 
+        case 'ON_RELOAD' :
+            return {...state, count: action.number};
+            
         default:
             return state;
     }

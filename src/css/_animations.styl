@@ -1,0 +1,25 @@
+.count-enter {
+    // background: red;
+    transition: .2s;
+    transform: translateY(100%);
+
+}
+
+.count-enter-active {
+    // background: yellow;
+    transform: translateY(0);
+}
+
+.count-exit {
+    transition: .2s;
+    transform: translateY(0);
+    // background: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.count-exit-active {
+    transform: translateY(-100%);
+    // background: green;
+}
